@@ -1,16 +1,7 @@
-# flutter_counter
+# Flutter Counter App
+Modified flutter default counter app with BloC/Cubit state management and architecture.
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Source
+Refactoring in 2023 from:
+- **`Github`**&ensp;&ensp;: [TheWCKD](https://github.com/TheWCKD/blocFromHeroToWizard) 
+- **`Youtube`**&ensp;: [BloC - from Hero to Wizard](https://www.youtube.com/playlist?list=PLptHs0ZDJKt8xOFmouQ__Unc5JTnT9JiK)
