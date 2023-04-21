@@ -55,11 +55,11 @@ class _CounterAppState extends State<CounterApp> with WidgetsBindingObserver {
     super.initState();
   }
 
-  @override
-  void didChangePlatformBrightness() {
-    context.read<ThemeCubit>().updateAppTheme();
-    super.didChangePlatformBrightness();
-  }
+  // @override
+  // void didChangePlatformBrightness() {
+  //   context.read<ThemeCubit>().updateAppTheme();
+  //   super.didChangePlatformBrightness();
+  // }
 
   @override
   void dispose() {
