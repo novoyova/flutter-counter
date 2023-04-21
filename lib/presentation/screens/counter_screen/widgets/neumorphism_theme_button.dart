@@ -12,7 +12,6 @@ class NeumorphismThemeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeCubit, ThemeState>(
       builder: (context, state) {
-        debugPrint('Hello I am here!');
         final themeMode = state.themeMode;
         final baseColor = themeMode == ThemeMode.light
             ? AppColors.lightBackgroundColor

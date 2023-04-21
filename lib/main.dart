@@ -34,55 +34,21 @@ class App extends StatelessWidget {
         BlocProvider<ThemeCubit>(create: (_) => ThemeCubit()),
         BlocProvider<CounterCubit>(create: (_) => CounterCubit()),
       ],
-      child: const CounterApp(),
-    );
-  }
-}
-
-class CounterApp extends StatefulWidget {
-  const CounterApp({
-    super.key,
-  });
-
-  @override
-  State<CounterApp> createState() => _CounterAppState();
-}
-
-class _CounterAppState extends State<CounterApp> with WidgetsBindingObserver {
-  @override
-  void initState() {
-    WidgetsBinding.instance.addObserver(this);
-    super.initState();
-  }
-
-  // @override
-  // void didChangePlatformBrightness() {
-  //   context.read<ThemeCubit>().updateAppTheme();
-  //   super.didChangePlatformBrightness();
-  // }
-
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return ResponsiveSizer(
-      builder: (context, orientation, screenType) {
-        return MaterialApp(
-          builder: DevicePreview.appBuilder,
-          debugShowCheckedModeBanner: false,
-          title: AppStrings.appTitle,
-          theme: AppTheme.lightTheme,
-          darkTheme: AppTheme.darkTheme,
-          themeMode: context
-              .select((ThemeCubit themeCubit) => themeCubit.state.themeMode),
-          initialRoute: AppRouter.counter,
-          onGenerateRoute: AppRouter.onGenerateRoute,
-        );
-      },
+      child: ResponsiveSizer(
+        builder: (context, orientation, screenType) {
+          return MaterialApp(
+            builder: DevicePreview.appBuilder,
+            debugShowCheckedModeBanner: false,
+            title: AppStrings.appTitle,
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
+            themeMode: context
+                .select((ThemeCubit themeCubit) => themeCubit.state.themeMode),
+            initialRoute: AppRouter.counter,
+            onGenerateRoute: AppRouter.onGenerateRoute,
+          );
+        },
+      ),
     );
   }
 }
